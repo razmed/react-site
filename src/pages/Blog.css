@@ -1,0 +1,400 @@
+/* ====================
+   BLOG PAGE - 100% FIDÈLE À LA CAPTURE D'ÉCRAN
+   ==================== */
+
+:root {
+  --primary-red: #DC143C;
+  --vivid-red: #cf2e2e;
+  --dark-navy: #2c3e50;
+  --dark-bg: #2c2f3a;
+  --light-gray: #F5F5F5;
+  --medium-gray: #E0E0E0;
+  --text-dark: #2C2C2C;
+  --text-gray: #6B6B6B;
+  --pure-white: #FFFFFF;
+}
+
+/* ===========================
+   HERO SECTION
+   =========================== */
+.blog-hero-section {
+  background-color: var(--dark-navy);
+  padding: 100px 0 60px;
+  margin-top: -120px;
+  padding-top: 220px;
+}
+
+.blog-hero-content {
+  text-align: center;
+}
+
+.blog-page-title {
+  font-family: "Rajdhani", Sans-serif;
+  font-size: 4em;
+  font-weight: 900;
+  color: var(--pure-white);
+  margin: 0 0 0.5em 0;
+  text-transform: capitalize;
+}
+
+/* Breadcrumbs */
+.blog-breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  font-family: "Open Sans", Sans-serif;
+  font-size: 0.95em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumb-item a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+  color: var(--pure-white);
+}
+
+.breadcrumb-current {
+  color: var(--pure-white);
+}
+
+.breadcrumb-separator {
+  width: 8px;
+  height: 8px;
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+/* ===========================
+   MAIN SECTION - LAYOUT 2 COLONNES
+   =========================== */
+.blog-main-section {
+  background-color: var(--pure-white);
+  padding: 80px 0 120px;
+}
+
+.blog-layout-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4em;
+  align-items: flex-start;
+}
+
+/* ===========================
+   ARTICLES COLUMN
+   =========================== */
+.blog-articles-column {
+  width: 100%;
+}
+
+.blog-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.blog-entry-card {
+  background-color: var(--pure-white);
+  border-radius: 0;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-entry-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card-media-link {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0;
+}
+
+.blog-card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.blog-entry-card:hover .blog-card-image {
+  transform: scale(1.05);
+}
+
+.blog-card-content {
+  padding: 2em 0;
+}
+
+.blog-entry-meta {
+  margin-bottom: 1em;
+}
+
+.blog-meta-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: "Open Sans", Sans-serif;
+  font-size: 0.9em;
+  color: var(--text-gray);
+  text-transform: uppercase;
+}
+
+.date-icon {
+  font-size: 0.9em;
+  color: var(--primary-red);
+}
+
+.blog-entry-title {
+  font-family: "Rajdhani", Sans-serif;
+  font-size: 1.8em;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 0.7em 0;
+  color: var(--text-dark);
+}
+
+.blog-entry-title a {
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.blog-entry-title a:hover {
+  color: var(--primary-red);
+}
+
+.blog-entry-excerpt {
+  margin: 0;
+}
+
+.blog-entry-excerpt p {
+  font-family: "Open Sans", Sans-serif;
+  font-size: 1em;
+  line-height: 1.7em;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+/* ===========================
+   SIDEBAR COLUMN
+   =========================== */
+.blog-sidebar-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  position: sticky;
+  top: 100px;
+}
+
+.sidebar-widget {
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* Sidebar Card Red - L'actualité des travaux publics */
+.sidebar-card-red {
+  background: linear-gradient(135deg, var(--vivid-red) 0%, #e74c3c 100%);
+  color: var(--pure-white);
+}
+
+.sidebar-card-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sidebar-card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.sidebar-card-content-red {
+  padding: 2em 2em 2.5em;
+}
+
+.sidebar-card-title-red {
+  font-family: "Rajdhani", Sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--pure-white);
+  margin: 0 0 0.8em 0;
+  line-height: 1.3;
+}
+
+.sidebar-card-text-red {
+  font-family: "Open Sans", Sans-serif;
+  font-size: 0.95em;
+  line-height: 1.6em;
+  color: var(--pure-white);
+  margin: 0 0 1.5em 0;
+}
+
+.sidebar-card-button-red {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--pure-white);
+  color: var(--primary-red);
+  font-family: "Rajdhani", Sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-card-button-red:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar Card Gray - Derrière chaque chantier */
+.sidebar-card-gray {
+  background-color: var(--dark-bg);
+  color: var(--pure-white);
+}
+
+.sidebar-card-content-gray {
+  padding: 2.5em 2em;
+}
+
+.sidebar-card-title-gray {
+  font-family: "Rajdhani", Sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--pure-white);
+  margin: 0 0 0.8em 0;
+  line-height: 1.3;
+}
+
+.sidebar-card-text-gray {
+  font-family: "Open Sans", Sans-serif;
+  font-size: 0.95em;
+  line-height: 1.7em;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* ===========================
+   CONTAINER
+   =========================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .blog-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 3em;
+  }
+
+  .blog-sidebar-column {
+    position: relative;
+    top: 0;
+  }
+
+  .blog-page-title {
+    font-size: 3.5em;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .blog-hero-section {
+    padding: 80px 0 50px;
+    padding-top: 180px;
+  }
+
+  .blog-page-title {
+    font-size: 2.8em;
+  }
+
+  .blog-main-section {
+    padding: 60px 0 80px;
+  }
+
+  .blog-entries {
+    gap: 2.5em;
+  }
+
+  .blog-entry-title {
+    font-size: 1.5em;
+  }
+
+  .blog-card-content {
+    padding: 1.5em 0;
+  }
+
+  .sidebar-card-content-red,
+  .sidebar-card-content-gray {
+    padding: 2em 1.5em;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 668px) {
+  .blog-page-title {
+    font-size: 2.2em;
+  }
+
+  .blog-entry-title {
+    font-size: 1.3em;
+  }
+
+  .blog-breadcrumbs {
+    font-size: 0.85em;
+  }
+
+  .sidebar-card-title-red,
+  .sidebar-card-title-gray {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-page-title {
+    font-size: 2em;
+  }
+
+  .blog-hero-section {
+    padding: 70px 0 40px;
+    padding-top: 160px;
+  }
+
+  .blog-main-section {
+    padding: 50px 0 70px;
+  }
+
+  .container {
+    padding: 0 1.5em;
+  }
+
+  .blog-entry-title {
+    font-size: 1.2em;
+  }
+
+  .blog-entry-excerpt p {
+    font-size: 0.95em;
+  }
+
+  .sidebar-card-button-red {
+    padding: 10px 25px;
+    font-size: 0.95em;
+  }
+}
+
